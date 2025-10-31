@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: 'Arial', sans-serif;
+}
+
+.animation {
+  animation-name: freedom;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes freedom {
+  0%, 100% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  75% {
+    background-color: green;
+  }
+}
+
+.timer-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.mainText {
+  margin: 0px 0px 10px 0px;
+  color: white;
+  text-align: center;
+}
+
+.successText {
+  margin: 0px 0px 10px 0px;
+  display: none;
+  text-align: center;
+  color: white; 
+}
+
+.timer {
+  display: flex;
+  gap: 20px;
+}
+
+.time-block {
+  text-align: center;
+  color: #fff;
+}
+
+.time-block span:first-child {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 20px;
+  border-radius: 10px;
+  min-width: 80px;
+  transition: transform 0.3s ease;
+}
+
+.time-block span:first-child:hover {
+  transform: scale(1.1);
+}
+
+.time-block span:last-child {
+  display: block; 
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 10px; 
+  opacity: 0.8;
+  padding: 5px 0;
+}
+
