@@ -1,21 +1,20 @@
-const targetDate = new Date('Nov 12, 2025 12:15:00').getTime();
+const targetDate = new Date('Oct 31, 2025 20:38:20').getTime();
 const successText = document.querySelector(".successText");
 const mainText = document.querySelector(".mainText");
 const body = document.getElementById("body");
+
+body.classList.remove("animation");
 
 const countdown = setInterval(() => {
   const now = new Date().getTime();
   let distance = targetDate - now;
 
-  // If countdown passed zero, execute your success logic once
   if (distance <= 0) {
-    // Optional: run your previous "success" code here
+    body.classList.add("animation");
     successText.style.display = "block";
     mainText.innerHTML = "Days of freedom:";
     body.style.background = "red";
-    body.style.backgroundColor = "green"; // example
-
-    // Now start counting up instead of down
+    body.style.backgroundColor = "green"; 
     distance = Math.abs(distance);
   }
 
