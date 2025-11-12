@@ -1,4 +1,4 @@
-const targetDate = new Date('Nov 12, 2025 12:15:00').getTime();
+const targetDate = new Date('Nov 12, 2025 13:05:00').getTime();
 const successText = document.querySelector(".successText");
 const mainText = document.querySelector(".mainText");
 const body = document.getElementById("body");
